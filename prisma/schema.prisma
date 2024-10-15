@@ -1,0 +1,58 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Paslon {
+  id           Int    @id 
+  nama_ketos   String
+  nama_waketos String
+  gambar       String
+
+  Perolehan Perolehan[]
+}
+
+model Kelas {
+  id   Int    @id
+  nama String
+  Dpt  Dpt[]
+}
+
+model Dpt {
+  id       Int    @id
+  nama     String
+  id_kelas Int
+  status   Int    @default(0)
+  antrian  Int    @default(0)
+
+  Kelas Kelas @relation(fields: [id_kelas], references: [id])
+
+  Perolehan Perolehan[]
+}
+
+model Bilik {
+  id       Int    @id
+  nama     String
+  password String
+  color    String
+
+  Perolehan Perolehan[]
+}
+
+model Perolehan {
+  id        Int     @id @default(autoincrement())
+  id_paslon Int
+  id_dpt    Int
+  id_bilik  Int
+  aktif     Boolean @default(false)
+
+  Paslon Paslon @relation(fields: [id_paslon], references: [id])
+  Dpt    Dpt    @relation(fields: [id_dpt], references: [id])
+  Bilik  Bilik  @relation(fields: [id_bilik], references: [id])
+
+  @@map("perolehan")
+}
