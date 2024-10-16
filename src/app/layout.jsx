@@ -13,7 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
-            <body className={`${publicSans.className} h-scren bg-slate-100`}>
+            <body className={`${publicSans.className} h-scren bg-background`}>
                 <NextTopLoader showSpinner={false} color="#2563eb" />
                 {children}
             </body>

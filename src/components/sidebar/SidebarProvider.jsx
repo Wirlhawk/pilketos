@@ -8,9 +8,9 @@ export default function SidebarProvider({ children }) {
             <Sidebar />
             <div className="flex flex-1 flex-col">
                 <div className="h-14">
-                    <Header />
+                    {/* <Header /> */}
                 </div>
-                <div className="overflow-y-auto">{children}</div>
+                <div className="overflow-y-auto px-5 py-7">{children}</div>
             </div>
         </div>
     );

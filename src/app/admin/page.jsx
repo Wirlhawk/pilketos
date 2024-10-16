@@ -1,9 +1,11 @@
-import React from "react";
+import React from "react"
+import { getAllDpt } from "@/actions/getAllDpt"
 
-export default function page() {
+export default async function page() {
+    
     return (
-        <div className="w-full overflow-y-auto">
-            admin page
+        <div>
+            <h1>Admin Page Dashboard</h1>
         </div>
-    );
+    )
 }

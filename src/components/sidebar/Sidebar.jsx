@@ -23,7 +23,7 @@ const routes = [
 
 export const Sidebar = () => {
     return (
-        <div className="border-r bg-background md:block md:w-64 lg:w-72">
+        <div className="border-r bg-muted/40 md:block md:w-64 lg:w-64">
             <div className="flex h-full max-h-screen flex-col gap-2">
                 <div className="flex h-14 items-center border-b px-4 lg:h-[60px] lg:px-6">
                     <Link
@@ -36,16 +36,14 @@ export const Sidebar = () => {
                 </div>
 
                 <nav className="flex-1 px-2 py-2 text-base font-medium lg:px-4">
-                    {
-                        routes.map((route,index) => (
-                            <NavLink
-                                key={index}
-                                href={route.href}
-                                icon={route.icon}
-                                text={route.text}
-                            />
-                        ))
-                    }
+                    {routes.map((route, index) => (
+                        <NavLink
+                            key={index}
+                            href={route.href}
+                            icon={route.icon}
+                            text={route.text}
+                        />
+                    ))}
                 </nav>
             </div>
         </div>
