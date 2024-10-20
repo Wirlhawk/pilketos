@@ -2,7 +2,7 @@
 import prisma from "@/lib/db";
 import { revalidatePath } from "next/cache";
 
-export const masukAntrian = async ({id}) => {
+export const masukAntrian = async ({ id }) => {
     await prisma.dpt.update({
         data: {
             status: 1
@@ -11,6 +11,7 @@ export const masukAntrian = async ({id}) => {
             id: id
         }
     });
+
 
     revalidatePath('/admin/dpt');
     return { success: true };

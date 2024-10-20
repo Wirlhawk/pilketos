@@ -1,15 +1,19 @@
+import { UsersRound } from "lucide-react";
 import { columns } from "./columns"
 import { DataTable } from "./dataTable"
 import { getAllDpt } from '@/actions/getAllDpt';
+import PageHeader from "@/components/pageHeader";
 
-export default async function DemoPage() {
+export default async function Page() {
     const data = await getAllDpt()
-    console.log(data)
 
     return (
         <div className="container mx-auto">
-            <h1 className="text-3xl mb-3">Daftar Pemilih Tetap</h1>
+            <PageHeader 
+                icon={<UsersRound size={28} strokeWidth={2.25}/> } 
+                title="Daftar Pemilih Tetap"
+            />
             <DataTable columns={columns} data={data} />
         </div>
-    )
+    );
 }

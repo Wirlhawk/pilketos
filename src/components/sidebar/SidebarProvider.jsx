@@ -7,7 +7,7 @@ export default function SidebarProvider({ children }) {
         <div className="flex h-screen w-full">
             <Sidebar />
             <div className="flex flex-1 flex-col">
-                <div className="h-14">
+                <div>
                     <Header />
                 </div>
                 <div className="overflow-y-auto px-5 py-7">{children}</div>

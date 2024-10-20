@@ -3,7 +3,7 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "mysql"
   url      = env("DATABASE_URL")
 }
 
@@ -31,7 +31,7 @@ model Dpt {
 
   Kelas Kelas @relation(fields: [id_kelas], references: [id])
 
-  Perolehan Perolehan[]
+  Perolehan Perolehan?
 }
 
 model Bilik {
@@ -45,13 +45,11 @@ model Bilik {
 
 model Perolehan {
   id        Int     @id @default(autoincrement())
-  id_paslon Int
-  id_dpt    Int
+  id_paslon Int?
+  id_dpt    Int     @unique
   id_bilik  Int
-  aktif     Boolean @default(false)
 
-  Paslon Paslon @relation(fields: [id_paslon], references: [id])
+  Paslon Paslon? @relation(fields: [id_paslon], references: [id])
   Dpt    Dpt    @relation(fields: [id_dpt], references: [id])
   Bilik  Bilik  @relation(fields: [id_bilik], references: [id])
-
 }
