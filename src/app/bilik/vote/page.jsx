@@ -1,12 +1,24 @@
+import { getCurrentOccupant } from "@/actions/getCurrentOccupant";
 import FloatCard from "@/components/float-card";
 import PaslonCard from "@/components/paslon-card";
+import { getSession } from "@/lib/auth";
+import { redirect } from "next/navigation";
 import React from "react";
 
-export default function page() {
+export const revalidate = 0;
+
+export default async function page() {
+    const { bilikData } = await getSession()
+    const currentOccupant = await getCurrentOccupant({idBilik : bilikData.id})
+    if (!currentOccupant) {
+        return redirect('/bilik')
+    }
+    console.log("data dpt bilik skrg", currentOccupant);
+
     return (
         <div className="flex flex-col items-center justify-center gap-14 h-full">
             <FloatCard
-                title={"Kafkariela Nigeria - XII RPL 1"}
+                title={`${currentOccupant.nama} - ${currentOccupant.Kelas.nama}`}
                 className="pt-5"
                 floatClassName="top-[-1rem]"
             >
@@ -16,9 +28,9 @@ export default function page() {
             </FloatCard>
 
             <div className="flex justify-center gap-10">
-                <PaslonCard/>
-                <PaslonCard/>
-                <PaslonCard/>
+                <PaslonCard />
+                <PaslonCard />
+                <PaslonCard />
             </div>
         </div>
     );

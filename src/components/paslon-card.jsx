@@ -8,9 +8,11 @@ export default function PaslonCard({}) {
                 01
             </div>
 
-            <div className="w-full aspect-square border-4 border-black rounded-2xl grid place-items-center text-5xl font-bold">
-                1:1
-            </div>
+            <img
+                className="w-full aspect-square border-4 border-black rounded-2xl grid place-items-center text-5xl font-bold object-cover"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYJdvMCLnoRNJS71p04s2ahHfBmzcOTIwtQg&s"
+                alt=""
+            ></img>
 
             <div className="h-full flex flex-col gap-3 px-2">
                 <h1 className="text-3xl font-bold">Paslon 01</h1>

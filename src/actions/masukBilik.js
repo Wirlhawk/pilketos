@@ -20,7 +20,6 @@ export const masukBilik = async ({idDpt, idBilik}) => {
     });
 
     if( result.length > 0 ) {
-        console.log("BILIK UDAH DI OCCUPIED")
         return { success: false };
     }
 
@@ -49,5 +48,7 @@ export const masukBilik = async ({idDpt, idBilik}) => {
     ]);
 
     revalidatePath('/admin/antrian');
+    revalidatePath('/bilik/vote');
+    revalidatePath('/bilik');
     return { success: true };
 }

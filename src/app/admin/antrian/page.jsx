@@ -5,7 +5,6 @@ import { getAllAntrian } from "@/actions/getAllAntrian"
 
 export default async function Page() {
     const data = await getAllAntrian()
-    console.log(data)
     return (
         <div>
             <PageHeader
