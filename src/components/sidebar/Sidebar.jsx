@@ -2,7 +2,6 @@
 import Link from "next/link";
 import { House, ListEnd, UsersRound, Vote } from "lucide-react";
 import { usePathname } from "next/navigation";
-import { ModeToggle } from "../modeToggle";
 
 const routes = [
     {

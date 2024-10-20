@@ -13,10 +13,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
-            <body className={`${publicSans.className} h-scren bg-background`}>
-                <NextTopLoader showSpinner={false} color="#2563eb" />
+            <body
+                className={`${publicSans.className} h-scren`}
+            >
+                
                 {children}
             </body>
         </html>
-    )
+    );
 }
