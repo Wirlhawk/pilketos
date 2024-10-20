@@ -12,11 +12,6 @@ export const masukBilik = async ({idDpt, idBilik}) => {
                 }
             }
         },
-        // include: {
-        //     Perolehan: {
-        //         Bilik: true
-        //     }, 
-        // },
     });
 
     if( result.length > 0 ) {

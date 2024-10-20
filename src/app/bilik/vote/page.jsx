@@ -28,9 +28,9 @@ export default async function page() {
             </FloatCard>
 
             <div className="flex justify-center gap-10">
-                <PaslonCard />
-                <PaslonCard />
-                <PaslonCard />
+                <PaslonCard dpt={currentOccupant} idPaslon={1} />
+                <PaslonCard dpt={currentOccupant} idPaslon={2} />
+                <PaslonCard dpt={currentOccupant} idPaslon={3} />
             </div>
         </div>
     );

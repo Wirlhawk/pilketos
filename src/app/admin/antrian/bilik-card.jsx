@@ -1,5 +1,9 @@
+"use client"
 import React from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from '@/components/ui/button';
+import { removeFromBilik } from '@/actions/removeFromBilik';
+import { User } from 'lucide-react';
 
 export default function BilikCard({ nomorBilik, occupant }) {
     let cardColor;
@@ -31,6 +35,21 @@ export default function BilikCard({ nomorBilik, occupant }) {
                 <p className="text mb-2 truncate">
                     {occupant ? occupant.nama : "Kosong"}
                 </p>
+                {occupant && (
+                    <Button
+                        variant="outline"
+                        size="sm"
+                        onClick={async () => {
+                            await removeFromBilik({
+                                idBilik: nomorBilik,
+                                idDpt: occupant.id,
+                            });
+                        }}
+                    >
+                        <User className="mr-2 h-4 w-4" />
+                        Remove
+                    </Button>
+                )}
             </CardContent>
         </Card>
     );
