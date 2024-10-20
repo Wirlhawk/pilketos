@@ -25,11 +25,18 @@ export const masukBilik = async ({idDpt, idBilik}) => {
     }
 
     await prisma.$transaction([
-        prisma.perolehan.create({
-            data: {
+        prisma.perolehan.upsert({
+            where: {
+                id_dpt: idDpt
+            },
+            update: {
+                id_dpt: idDpt,
+                id_bilik: idBilik
+            },
+            create: {
                 id_dpt: idDpt,
                 id_bilik: idBilik,
-            } 
+            }
         }),
         prisma.dpt.update({
             where: {
