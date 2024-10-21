@@ -1,7 +1,7 @@
 import React from "react";
-import { Button } from "./ui/button";
+import VoteButton from "./vote-button";
 
-export default function PaslonCard({}) {
+export default function PaslonCard({ dpt, idPaslon }) {
     return (
         <div className="w-[300px] h-[500px] bg-white border-4 border-black rounded-3xl relative p-3 pb-5 flex flex-col gap-3">
             <div className="text-3xl w-20 h-20 grid place-items-center rounded-full border-4 border-black absolute top-0 right-0 translate-x-[35%] translate-y-[-35%] bg-yellow-400 font-bold">
@@ -22,12 +22,7 @@ export default function PaslonCard({}) {
                     <h1>Rayhan Sigma</h1>
                 </div>
 
-                <Button
-                    className="bg-yellow-400 text-lg font-bold text-black rounded-xl 
-                        border-[3px] border-black hover:bg-yellow-300 py-5 w-full mt-auto"
-                >
-                    Pilih
-                </Button>
+                <VoteButton idDpt={dpt.id} idPaslon={idPaslon} />
             </div>
         </div>
     );

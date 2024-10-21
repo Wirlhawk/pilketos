@@ -12,7 +12,6 @@ export const masukAntrian = async ({ id }) => {
         }
     });
 
-
     revalidatePath('/admin/dpt');
     return { success: true };
 }

@@ -44,9 +44,8 @@ model Bilik {
 }
 
 model Perolehan {
-  id        Int     @id @default(autoincrement())
+  id_dpt    Int     @unique @id
   id_paslon Int?
-  id_dpt    Int     @unique
   id_bilik  Int
 
   Paslon Paslon? @relation(fields: [id_paslon], references: [id])
