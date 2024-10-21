@@ -14,8 +14,8 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <body
-                className={`${publicSans.className} h-scren`}
-            >
+                className={`${publicSans.className} h-scren overflow-hidden`}
+            >   
                 
                 {children}
             </body>
