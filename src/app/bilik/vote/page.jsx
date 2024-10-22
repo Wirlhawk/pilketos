@@ -4,6 +4,8 @@ import PaslonCard from "@/components/paslon-card";
 import { getSession } from "@/lib/auth";
 import { redirect } from "next/navigation";
 import React from "react";
+import InitialDialog from "./initial-dialog";
+
 
 export const revalidate = 0;
 
@@ -32,6 +34,8 @@ export default async function page() {
                 <PaslonCard dpt={currentOccupant} idPaslon={2} />
                 <PaslonCard dpt={currentOccupant} idPaslon={3} />
             </div>
+
+            <InitialDialog dpt={currentOccupant} />
         </div>
     );
 }

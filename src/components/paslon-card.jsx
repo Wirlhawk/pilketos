@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import VoteButton from "./vote-button";
+import ConfirmVoteDialog from "./confirm-vote-dialog";
+
 
 export default function PaslonCard({ dpt, idPaslon }) {
     return (
@@ -23,7 +24,8 @@ export default function PaslonCard({ dpt, idPaslon }) {
                     <h1>Rayhan Sigma</h1>
                 </div>
 
-                <VoteButton idDpt={dpt.id} idPaslon={idPaslon} />
+                <ConfirmVoteDialog  idDpt={dpt.id} idPaslon={idPaslon}/>
+                {/* <VoteButton idDpt={dpt.id} idPaslon={idPaslon} /> */}
             </div>
         </div>
     );
