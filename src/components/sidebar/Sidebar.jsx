@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { House, ListEnd, UsersRound, Vote } from "lucide-react";
+import { ChartColumn, House, ListEnd, UsersRound, Vote } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 const routes = [
@@ -8,6 +8,11 @@ const routes = [
         href: "/admin",
         icon: <House className="h-5 w-5" />,
         text: "Dashboard",
+    },
+    {
+        href: "/admin/perolehan",
+        icon: <ChartColumn className="h-5 w-5" />,
+        text: "Perolehan Suara",
     },
     {
         href: "/admin/dpt",
