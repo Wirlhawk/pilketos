@@ -45,10 +45,8 @@ export default function BilikCard({ nomorBilik, occupant }) {
                 <CardHeader>
                     <CardTitle>Bilik {nomorBilik}</CardTitle>
                 </CardHeader>
-                <CardContent>
-                    <p className="text mb-2 truncate">
-                        {occupant ? occupant.nama : "Kosong"}
-                    </p>
+                <CardContent className="text mb-2 ">
+                    {occupant ? occupant.nama : "Kosong"}
                 </CardContent>
             </Card>
             <Button

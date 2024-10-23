@@ -14,9 +14,8 @@ import { Button } from "@/components/ui/button";
 export default function InitialDialog({ dpt }) {
     const [open, setOpen] = useState(false);
 
-    // Automatically open the dialog on page load
     useEffect(() => {
-        setOpen(true); // Set dialog to open when the component mounts
+        setOpen(true); 
     }, []);
 
     return (

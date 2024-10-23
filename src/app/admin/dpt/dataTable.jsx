@@ -43,7 +43,7 @@ export function DataTable({ columns, data }) {
         getFilteredRowModel: getFilteredRowModel(),
         onSortingChange: setSorting,
         getSortedRowModel: getSortedRowModel(),
-        getPaginationRowModel: getPaginationRowModel(),
+        // getPaginationRowModel: getPaginationRowModel(),
         state: {
             sorting,
             columnFilters,
@@ -64,7 +64,7 @@ export function DataTable({ columns, data }) {
                     className="max-w-sm"
                 />
 
-                <Select
+                {/* <Select
                     onValueChange={(value) => {
                         table.setPageSize(Number(value));
                     }}
@@ -83,7 +83,7 @@ export function DataTable({ columns, data }) {
                             </SelectItem>
                         ))}
                     </SelectContent>
-                </Select>
+                </Select> */}
 
             </div>
             <Card className="rounded-md border">

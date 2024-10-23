@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import BilikCard from "./bilik-card"
 import ListItem from './list-item';
 import { masukBilik } from "@/actions/masukBilik"
+import { bilikList } from '@/constant';
 
 const dptReducer = ({ action, state }) => {
     switch ( action ) {
@@ -30,7 +31,7 @@ export default async function ListAntrian({ dpt }) {
     return (
         <>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4 mt-7">
-                {[1, 2, 3, 4].map((nomorBilik) => {
+                {bilikList.map((nomorBilik) => {
                     const occupant = occupantList.find(
                         (o) => o.Perolehan.Bilik.id === nomorBilik
                     );

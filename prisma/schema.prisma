@@ -3,12 +3,12 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "mysql"
   url      = env("DATABASE_URL")
 }
 
 model Paslon {
-  id           Int    @id 
+  id           Int    @id
   nama_ketos   String
   nama_waketos String
   gambar       String
@@ -23,7 +23,7 @@ model Kelas {
 }
 
 model Dpt {
-  id       Int    @id
+  id       BigInt @id
   nama     String
   id_kelas Int
   status   Int    @default(0)
@@ -44,11 +44,18 @@ model Bilik {
 }
 
 model Perolehan {
-  id_dpt    Int     @unique @id
+  id_dpt    BigInt @id @unique
   id_paslon Int?
   id_bilik  Int
 
   Paslon Paslon? @relation(fields: [id_paslon], references: [id])
-  Dpt    Dpt    @relation(fields: [id_dpt], references: [id])
-  Bilik  Bilik  @relation(fields: [id_bilik], references: [id])
+  Dpt    Dpt     @relation(fields: [id_dpt], references: [id])
+  Bilik  Bilik   @relation(fields: [id_bilik], references: [id])
+}
+
+model Status_Pemilihan {
+  id                Int     @id @unique @default(1)
+  selesai           Boolean @default(false)
+  isOpened          Boolean @default(false)
+  authorization_key String
 }

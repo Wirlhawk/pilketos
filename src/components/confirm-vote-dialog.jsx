@@ -12,7 +12,14 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "./ui/button";
 
-export default function ConfirmVoteDialog({idDpt,idPaslon}) {
+export default function ConfirmVoteDialog({ idDpt, idPaslon }) {
+    const handleClick = async () => {
+        await votePaslon({
+            idDpt,
+            idPaslon,
+        });
+    };
+
     return (
         <Dialog>
             <DialogTrigger asChild>

@@ -12,7 +12,6 @@ import { Button } from "@/components/ui/button";
 import { loginBilik } from "@/actions/loginBilik";
 
 export default async function page() {
-
     return (
         <div className="grid place-items-center h-full">
             <FloatCard title="Login Bilik" className="w-1/3 pt-12">

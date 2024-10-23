@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { masukBilik } from "@/actions/masukBilik";
 import { keluarAntrian } from "@/actions/keluarAntrian";
 import DropdownAntrian from "./dropdown-antrian"
+import { bilikList } from "@/constant";
 
 export default function ListItem({ dpt, occupantList }) {
     const handleKeluarAntrian = async () => {
@@ -20,7 +21,7 @@ export default function ListItem({ dpt, occupantList }) {
                 </p>
             </div>
             <div className="flex space-x-2">
-                {[1, 2, 3, 4].map((nomorBilik) => (
+                {bilikList.map((nomorBilik) => (
                     <Button
                         key={nomorBilik}
                         size="sm"
