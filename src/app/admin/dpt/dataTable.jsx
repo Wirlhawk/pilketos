@@ -77,7 +77,7 @@ export function DataTable({ columns, data }) {
                         />
                     </SelectTrigger>
                     <SelectContent>
-                        {[5 ,10, 20, 30, 40, 50, 600].map((pageSize) => (
+                        {[10,20, 30, 40, 50, 600].map((pageSize) => (
                             <SelectItem key={pageSize} value={String(pageSize)}>
                                 Show {pageSize}
                             </SelectItem>
@@ -88,7 +88,7 @@ export function DataTable({ columns, data }) {
             </div>
             <Card className="rounded-md border">
                 <Table>
-                    <TableHeader>
+                    <TableHeader className="bg-muted/40">
                         {table.getHeaderGroups().map((headerGroup) => (
                             <TableRow key={headerGroup.id}>
                                 {headerGroup.headers.map((header) => {

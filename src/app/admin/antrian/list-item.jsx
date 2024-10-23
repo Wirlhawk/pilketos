@@ -1,10 +1,16 @@
-"use client"
+"use client";
 import React from "react";
 import { UserPlus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { masukBilik } from "@/actions/masukBilik";
+import { keluarAntrian } from "@/actions/keluarAntrian";
+import DropdownAntrian from "./dropdown-antrian"
 
 export default function ListItem({ dpt, occupantList }) {
+    const handleKeluarAntrian = async () => {
+        await keluarAntrian({id: dpt.id})
+    }
+
     return (
         <div className="flex items-center justify-between py-2 border-b last:border-b-0">
             <div>
@@ -26,13 +32,15 @@ export default function ListItem({ dpt, occupantList }) {
                             });
                         }}
                         disabled={occupantList.some(
-                            (occupant) => occupant.Perolehan.Bilik.id === nomorBilik
+                            (occupant) =>
+                                occupant.Perolehan.Bilik.id === nomorBilik
                         )}
                     >
                         <UserPlus className="mr-2 h-4 w-4" />
                         {nomorBilik}
                     </Button>
                 ))}
+                <DropdownAntrian action={ handleKeluarAntrian }/>
             </div>
         </div>
     );

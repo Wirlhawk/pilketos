@@ -56,6 +56,10 @@ export default async function ListAntrian({ dpt }) {
                             occupantList={occupantList}
                         />
                     ))}
+
+                    {antrianList.length === 0 && (
+                        <h1 className='text-muted-foreground'>Antrian Kosong</h1>
+                    )}
                 </CardContent>
             </Card>
         </>

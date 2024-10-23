@@ -1,5 +1,7 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
-import VoteButton from "./vote-button";
+import ConfirmVoteDialog from "./confirm-vote-dialog";
+
 
 export default function PaslonCard({ dpt, idPaslon }) {
     return (
@@ -9,7 +11,7 @@ export default function PaslonCard({ dpt, idPaslon }) {
             </div>
 
             <img
-                className="w-full aspect-square border-4 border-black rounded-2xl grid place-items-center text-5xl font-bold object-cover"
+                className="w-full aspect-square border-4 border-black rounded-2xl grid place-items-center text-5xl font-bold object-cover "
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYJdvMCLnoRNJS71p04s2ahHfBmzcOTIwtQg&s"
                 alt=""
             ></img>
@@ -22,7 +24,8 @@ export default function PaslonCard({ dpt, idPaslon }) {
                     <h1>Rayhan Sigma</h1>
                 </div>
 
-                <VoteButton idDpt={dpt.id} idPaslon={idPaslon} />
+                <ConfirmVoteDialog  idDpt={dpt.id} idPaslon={idPaslon}/>
+                {/* <VoteButton idDpt={dpt.id} idPaslon={idPaslon} /> */}
             </div>
         </div>
     );
