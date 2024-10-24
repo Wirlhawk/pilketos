@@ -11,7 +11,7 @@ export default function SidebarProvider({ children }) {
                 <div>
                     <Header />
                 </div>
-                <div className="overflow-y-auto px-5 py-7 bg-background">
+                <div className="overflow-y-auto px-5 py-7 bg-background flex-1 overflow-x-hidden">
                     <NextTopLoader showSpinner={false} color="#2563eb" />
                     {children}
                 </div>

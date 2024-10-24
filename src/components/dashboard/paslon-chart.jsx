@@ -38,6 +38,8 @@ const mapGroupedPerolehanToPaslonData = (groupedPerolehan) => [
 ];
 
 export default function PaslonChart({ groupedPerolehan }) {
+
+    
     const paslonData = mapGroupedPerolehanToPaslonData(groupedPerolehan);
     console.log(paslonData);
 

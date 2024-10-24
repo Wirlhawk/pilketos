@@ -15,10 +15,10 @@ export default async function page() {
                 <h1 className="font-bold text-3xl h-fit">{bilikData?.nama}</h1>
             </div>
             <FloatCard title="Welcome" className="p-5 pt-16 pb-10 z-10">
-                <h1 className="font-bold text-7xl text-blue-600">
+                <h1 className="font-bold text-7xl ">
                     Selamat Datang!
                 </h1>
-                <p className="w-[70%] text-center mt-3 font-bold text-xl">
+                <p className="w-[70%] text-center mt-3 font-bold text-xl text-blue-600">
                     Di Aplikasi Pemilu OSIS SMK AL-Amanah. Klik Mulai
                     Memilih untuk menetukan calon ketua OSIS pilihanmu.
                 </p>
