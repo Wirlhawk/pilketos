@@ -15,7 +15,7 @@ export default function ChartWrapper({ isOpen, data }) {
             {isVisible && (
                 <Confetti
                     recycle={false}
-                    tweenDuration={5000}
+                    tweenDuration={1000}
                     width={width}
                     height={height}
                 />
