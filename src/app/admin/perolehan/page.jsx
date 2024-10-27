@@ -5,6 +5,8 @@ import ChartWrapper from "./chart-wrapper";
 import { getPemiluStatus } from "@/actions/getPemiluStatus";
 import { getAllPerolehan } from "@/actions/getAllPerolehan";
 
+export const revalidate = 0;
+
 export default async function page() {
     const { selesai, isOpened } = await getPemiluStatus();
     let data;

@@ -17,7 +17,7 @@ export default function page() {
                     asChild
                     className="bg-yellow-400 font-bold text-black rounded-xl border-[3px] border-black hover:bg-yellow-300 py-mt-auto px-5 w-full mt-5"
                 >
-                    <Link href="/bilik/vote">Selesai</Link>
+                    <Link href="/bilik">Selesai</Link>
                 </Button>
                 <div className="space-y-3"></div>
             </FloatCard>

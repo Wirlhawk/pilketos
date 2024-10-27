@@ -3,6 +3,8 @@ import { ListEnd } from "lucide-react";
 import ListAntrian from "./list-antrian";
 import { getAllAntrian } from "@/actions/getAllAntrian"
 
+export const revalidate = 0
+
 export default async function Page() {
     const data = await getAllAntrian()
     return (

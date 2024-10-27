@@ -112,7 +112,7 @@ export default function DptChart({ totalDpt, dptMemilih }) {
                     total={totalSiswa}
                     color="#f43f5e"
                 />
-                <p className="mt-4 text-md text-muted-foreground">
+                <p className="mt-4 text-sm text-muted-foreground">
                     {toPercentage(siswaBelumMemilih, totalSiswa)}% dari total
                     siswa
                 </p>

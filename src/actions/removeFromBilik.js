@@ -19,5 +19,6 @@ export const removeFromBilik = async ({ idDpt, idBilik }) => {
     });
 
     revalidatePath("/admin/antrian");
+    revalidatePath("/admin/dpt");
     return { success: true };
 };

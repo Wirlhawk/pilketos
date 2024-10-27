@@ -4,6 +4,8 @@ import { House } from "lucide-react";
 import DptChart from "@/components/dashboard/dpt-chart";
 import { countDptStatus } from "@/actions/countDptStatus";
 
+export const revalidate = 0
+
 export default async function page() {
     const { dptMemilih, totalDpt } = await countDptStatus();
     return (
