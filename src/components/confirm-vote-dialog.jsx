@@ -33,7 +33,7 @@ export default function ConfirmVoteDialog({ idDpt, idPaslon }) {
             <DialogContent className="border-4 border-black rounded-3xl">
                 <DialogHeader>
                     <DialogTitle className="text-2xl font-bold text-blue-600">
-                        Apakah anda yakin?
+                        Apakah anda yakin memilih Paslon 0{idPaslon}
                     </DialogTitle>
                     <DialogDescription className="text-black text-lg font-semibold">
                         Pilihan anda akan menetukan arah kepemimpinan OSIS di

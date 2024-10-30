@@ -12,7 +12,7 @@ import { Users, UserCheck, UserMinus } from "lucide-react";
 const toPercentage = (value, total) => ((value / total) * 100).toFixed(0);
 
 export default function DptChart({ totalDpt, dptMemilih }) {
-    const totalSiswa = totalDpt - 500;
+    const totalSiswa = totalDpt;
     const siswaMemilih = dptMemilih;
     const siswaBelumMemilih = totalSiswa - siswaMemilih;
 
@@ -76,9 +76,8 @@ export default function DptChart({ totalDpt, dptMemilih }) {
 
     return (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 ">
-
             <CardWrapper
-                title={"Total Siswa"}
+                title={"Total DPT"}
                 icon={<Users className="h-5 w-5 text-muted-foreground" />}
             >
                 <RadialChart
@@ -87,11 +86,11 @@ export default function DptChart({ totalDpt, dptMemilih }) {
                     color="#22c55e"
                 />
                 <p className="mt-4 text-sm text-muted-foreground">
-                    {toPercentage(totalSiswa, totalSiswa)}% dari total siswa
+                    {toPercentage(totalSiswa, totalSiswa)}% dari total DPT
                 </p>
             </CardWrapper>
             <CardWrapper
-                title={"Siswa Sudah Memilih"}
+                title={"DPT Sudah Memilih"}
                 icon={<UserCheck className="h-5 w-5 text-muted-foreground" />}
             >
                 <RadialChart
@@ -100,11 +99,11 @@ export default function DptChart({ totalDpt, dptMemilih }) {
                     color="#0ea5e9"
                 />
                 <p className="mt-4 text-sm text-muted-foreground">
-                    {toPercentage(siswaMemilih, totalSiswa)}% dari total siswa
+                    {toPercentage(siswaMemilih, totalSiswa)}% dari total DPT
                 </p>
             </CardWrapper>
             <CardWrapper
-                title={"Siswa Belum Memilih"}
+                title={"DPT Belum Memilih"}
                 icon={<UserMinus className="h-5 w-5 text-muted-foreground" />}
             >
                 <RadialChart
@@ -113,7 +112,7 @@ export default function DptChart({ totalDpt, dptMemilih }) {
                     color="#f43f5e"
                 />
                 <p className="mt-4 text-sm text-muted-foreground">
-                    {toPercentage(siswaBelumMemilih, totalSiswa)}% dari total
+                    {toPercentage(siswaBelumMemilih, totalSiswa)}% dari DPT
                     siswa
                 </p>
             </CardWrapper>
