@@ -3,10 +3,7 @@ import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { removeFromBilik } from "@/actions/removeFromBilik";
-import {
-    UserMinus,
-} from "lucide-react";
-
+import { UserMinus } from "lucide-react";
 
 export default function BilikCard({ nomorBilik, occupant }) {
     let cardColor;
@@ -67,5 +64,3 @@ export default function BilikCard({ nomorBilik, occupant }) {
         </div>
     );
 }
-
-
